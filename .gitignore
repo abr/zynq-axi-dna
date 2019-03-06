@@ -1,8 +1,8 @@
 *.jou
 *.log
-*.hw
-*.runs
-*.cache
-*.ip_user_files
-*.sim
+DNA_extractor
 .Xil
+bin
+pynq_dna/src/*
+!design_1.bd
+!design_1_wrapper.v
