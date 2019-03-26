@@ -1,5 +1,3 @@
-**put license/disclaimer here probably**
-
 # What is this?
 
 This is a method of reading the Device DNA from the PL for Zynq 7000 devices wrapped in an AXI interface for easy MMIO access on the PS.
