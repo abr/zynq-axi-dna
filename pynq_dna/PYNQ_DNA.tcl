@@ -469,7 +469,8 @@ export_ip_user_files -of_objects [get_files ./src/design_1.bd] -no_script -force
 export_simulation -of_objects [get_files ./src/design_1.bd] -directory ./DNA_extractor/DNA_extractor.ip_user_files/sim_scripts -ip_user_files_dir ./DNA_extractor/DNA_extractor.ip_user_files -ipstatic_source_dir ./DNA_extractor/DNA_extractor.ip_user_files/ipstatic -force -quiet
 launch_runs impl_1 -to_step write_bitstream -jobs 6
 wait_on_run impl_1
-write_bd_tcl -force ./bin/dna_extractor.tcl
 file copy -force ./DNA_extractor/DNA_extractor.runs/impl_1/design_1_wrapper.bit ./bin/dna_extractor.bit
+file copy -force ./src/hw_handoff/design_1.hwh ./bin/dna_extractor.hwh
+
 exit
 

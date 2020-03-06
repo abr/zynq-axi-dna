@@ -1,6 +1,7 @@
 # What is this?
 
-This is a method of reading the Device DNA from the PL for Zynq 7000 devices wrapped in an AXI interface for easy MMIO access on the PS.
+This is a method of reading the Device DNA from the PL for Zynq 7000 devices
+wrapped in an AXI interface for easy MMIO access on the PS.
 
 This is built with Vivado 2018.3 and is based off the
 [Xilinx AXI_DNA](https://www.xilinx.com/support/answers/71342.html)
@@ -34,7 +35,7 @@ the ``bin`` directory.
 
 ### Test it out
 
-You can now copy ``dna_extractor.bit`` and ``dna_extractor.tcl`` from
+You can now copy ``dna_extractor.bit`` and ``dna_extractor.hwh`` from
 the ``bin`` directory to the ``/home/xilinx`` directory of your PYNQ board and
 copy the ``DNA_test.ipynb`` notebook to the
 ``/home/xilinx/jupyter_notebooks`` directory.
