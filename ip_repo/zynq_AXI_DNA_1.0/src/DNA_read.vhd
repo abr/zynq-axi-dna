@@ -51,7 +51,7 @@ signal RD: std_logic := '0';                                                    
 signal SFT:  std_logic := '0';                                                        --- DNA Shift
 signal RESET: std_logic := '1';                                                   --- Reset Control
 
-signal SFT_cnt : integer range 0 to 62 := 0;                                   --Shift assert count
+signal SFT_cnt : integer range 0 to 55 := 0;                                   --Shift assert count
 signal COUNT : integer range 0 to 3 := 0;                                      --- FSM Count
 signal DONE_DNA : std_logic := '0';
 
@@ -135,7 +135,7 @@ begin
           when 2 =>
             RD <= '0';
             SFT <= '1';     --Assert SHIFT, hold asserted for 64 CLKs
-            IF (SFT_cnt < 62) THEN
+            IF (SFT_cnt < 55) THEN
               SFT_cnt <= SFT_cnt + 1;
               COUNT <= 2;
              ELSE
@@ -164,7 +164,7 @@ process (SYSCLK)
 begin
   if (SYSCLK 'event and SYSCLK='1') then
     if SFT = '1' then
-      SLR_tmp <= SLR_tmp (62 downto 0)& O;
+      SLR_tmp <= O & SLR_tmp (63 downto 1);
     end if;
   end if;
 end process;
