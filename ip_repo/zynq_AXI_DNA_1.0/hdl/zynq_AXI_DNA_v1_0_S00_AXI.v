@@ -404,8 +404,8 @@
 	// genvar loop since DNA bits are reversed
 	genvar i;
 	for (i = 0;i < 32;i = i+1)begin
-	    assign SRL_bus[i] =  slv_reg0[31-i];
-	    assign SRL_bus[32+i] =  slv_reg1[31-i];
+	    assign SRL_bus[i] =  slv_reg1[31-i];
+	    assign SRL_bus[32+i] =  slv_reg0[31-i];
 	
 	end
 	
